@@ -13,11 +13,11 @@ public class Question extends AbstractEntity {
 	//id of the last question asked on discussion forum
 	private static Long lastEntry = 0L;
 
-	public void autoGenerateId() {
+	public void autoGenerateId() { //CALLING PARENT SUPER CLASS METHOD setId TO SET QUESTION ID
 		lastEntry = lastEntry + 1L;
-
 		// please write your code below and follow this instruction:
 		// 1. Call the parent class' setId method and pass in lastEntry as the method variable;
+		super.setId(lastEntry);
 	}
 
 	/**
@@ -25,9 +25,10 @@ public class Question extends AbstractEntity {
 	 *
 	 * @return the title of the question
 	 */
-	public String getTitle() {
+	public String getTitle() { // CREATED GETTER FOR INSTANCE VARIABLE title
 		// please write your code here
 		// you should return the instance variable title of this question
+		return this.title;
 	}
 
 
@@ -36,9 +37,10 @@ public class Question extends AbstractEntity {
 	 *
 	 * @param title: the title that we want to give to this question
 	 */
-	public void setTitle(String title) {
+	public void setTitle(String title) { // CREATING SETTER FOR INSTANCE VARIABLE title
 		// please write your code here
 		// Set the instance variable title to the parameter variable title
+		this.title = title;
 	}
 
 	/**
@@ -46,9 +48,10 @@ public class Question extends AbstractEntity {
 	 *
 	 * @return details of the question
 	 */
-	public String getMessage() {
+	public String getMessage() { // CREATING GETTER FOR message
 		// please write your code here
 		// You should return the instance variable message of this question
+		return this.message;
 	}
 
 	/**
@@ -56,9 +59,10 @@ public class Question extends AbstractEntity {
 	 *
 	 * @param message: the message that we want to set the details of this question to
 	 */
-	public void setMessage(String message) {
+	public void setMessage(String message) { // CREATING SETTER FOR MESSAGE
 		// please write your code here
 		// you should set the instance variable message to the parameter variable message
+		this.message = message;
 	}
 
 	/**
@@ -66,9 +70,10 @@ public class Question extends AbstractEntity {
 	 *
 	 * @return user who wrote this question
 	 */
-	public User getUser() {
+	public User getUser() { // CREATING GETTER FOR user
 		// please write your code here
 		// You should return the instance variable user of this question
+		return user;
 	}
 
 	/**
@@ -76,9 +81,10 @@ public class Question extends AbstractEntity {
 	 *
 	 * @param user: the user who wrote this question
 	 */
-	public void setUser(User user) {
+	public void setUser(User user) { //CREATING SETTER FOR user
 		// please write your code here
 		// You should set the instance variable user to the parameter variable user
+		this.user = user;
 	}
 
 	/**
@@ -86,17 +92,19 @@ public class Question extends AbstractEntity {
 	 *
 	 * @return the number of upvotes this question has received
 	 */
-	public int getUpvoteCount() {
+	public int getUpvoteCount() { // CREATING GETTER FOR upvoteCount
 		// please write your code here
 		// You should return the instance variable upvoteCount
+		return upvoteCount;
 	}
 
 	/**
 	 * This question increases the number of upvotes by one
 	 */
-	public void increaseUpvoteCount() {
+	public void increaseUpvoteCount() { // METHOD TO INCREMENT upvoteCount BY 1, CREATED STATEMENT
 		// write your code here
 		// Increase the number stored in the instance variable upvoteCount by 1
+		this.upvoteCount = this.upvoteCount + 1;
 	}
 
 }

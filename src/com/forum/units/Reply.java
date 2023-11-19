@@ -18,6 +18,7 @@ public class Reply extends AbstractEntity {
 		// 1. Call the parent class' setId method and pass in lastEntry as the method variable;
 		//
 		// Note: You can read the setId method in the AbstractEntity class to understand how the setId method works
+		super.setId(lastEntry); // CALLING SETTER OF PARENT SUPER CLASSS AbstractEntity
 	}
 
 	/**
@@ -25,9 +26,10 @@ public class Reply extends AbstractEntity {
 	 *
 	 * @return the reply body
 	 */
-	public String getMessage() {
+	public String getMessage() { // CREATING GETTER STATEMENT FOR this.message
 		// please write your code here
 		// You should return the instance variable message
+		return this.message;
 	}
 
 	/**
@@ -35,10 +37,11 @@ public class Reply extends AbstractEntity {
 	 *
 	 * @param message: the message that we want to set as the reply body
 	 */
-	public void setMessage(String message) {
+	public void setMessage(String message) { // CREATING SETTER STATEMENT FOR this.message
 		// please write your code here
 		// You should set the instance variable message to the
 		// message variable that's passed into this function
+		this.message = message;
 	}
 
 	/**
@@ -46,9 +49,10 @@ public class Reply extends AbstractEntity {
 	 *
 	 * @return the user who wrote this reply
 	 */
-	public User getUser() {
+	public User getUser() { // CREATING GETTER STATEMENT FOR this.user
 		// please write your code here
 		// You should return the user instance variable
+		return this.user;
 	}
 
 	/**
@@ -56,10 +60,11 @@ public class Reply extends AbstractEntity {
 	 *
 	 * @param user: the user who wrote this reply
 	 */
-	public void setUser(User user) {
+	public void setUser(User user) { // CREATING SETTER STATEMENT FOR this.user
 		// please write your code here
 		// You should set the instance variable user to the user variable
 		// that is passed into this method
+		this.user = user;
 	}
 
 	/**
@@ -67,9 +72,10 @@ public class Reply extends AbstractEntity {
 	 *
 	 * @return the question to which this reply belongs to
 	 */
-	public Question getQuestion() {
+	public Question getQuestion() { // CREATING GETTER STATEMENT FOR this.question
 		// please write your code here
 		// You should set the instance variable question
+		return this.question;
 	}
 
 	/**
@@ -77,9 +83,10 @@ public class Reply extends AbstractEntity {
 	 *
 	 * @param question: the question that this reply belongs to
 	 */
-	public void setQuestion(Question question) {
+	public void setQuestion(Question question) { // CREATING SETTER STATEMENT FOR this.question
 		// please write your code here
 		// You should set the instance variable question to the question variable
 		// that is passed into this method
+		this.question = question;
 	}
 }

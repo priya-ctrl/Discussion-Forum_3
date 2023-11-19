@@ -17,6 +17,9 @@ public abstract class AbstractEntity {
 	 * @return the id of this Abstract entity
 	 */
 	// Please write code for the s method here
+	public long getId(){ 							//ADDED GETTER
+		return this.id;
+	}
 
 	/**
 	 *
@@ -28,6 +31,9 @@ public abstract class AbstractEntity {
 	 * @param id: the id of this Abstract entity
 	 */
 	// Please write code for the setId method here
+	public void setId(long id){ 					//ADDED SETTER
+		this.id = id;
+	}
 
 	/**
 	 *
@@ -37,6 +43,7 @@ public abstract class AbstractEntity {
 	 *
 	 */
 	// Please write code for the autoGenerateId abstract method here
+	abstract public void autoGenerateId();
 
 
 	public Date getCreated() {
